@@ -24,4 +24,4 @@ System.out.println("Have a good day!")
 
 Course [Syllabus](https://ucsd-cse15l-f22.github.io/syllabus/)
 
-We love [computers](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngitem.com%2Fso%2Fcomputer%2F&psig=AOvVaw1ei3lZ3KBCa3jmyDraZtR7&ust=1664316119514000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjD1-y6s_oCFQAAAAAdAAAAABAD)
+![computer](https://github.com/rvsanchezz/cse15l-lab-reports/blob/main/Computer-clipart-free-images-2.png)
