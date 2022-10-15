@@ -119,7 +119,8 @@ Once we know the file was compiled and works, we will copy it to the remote serv
 
 To do this, run this command in your terminal:
 
-`scp WhereAmI.java cs15lfa22xx@ieng6.ucsd.edu:~/`
+![sc1](https://user-images.githubusercontent.com/114266346/195964076-648153cc-f202-4182-bd30-dcd8a7e5d06e.png)
+
 
 You will be asked to enter your password for the server. Then you should log in using `ssh` again.
 Type `ls` into the terminal after logging in and you should see the WhereAmI.java file listed in the directory.
@@ -173,11 +174,9 @@ scp /Users/raquelsanchez/.ssh/id_rsa.pub r6sanche@ieng6.ucsd.edu:~/.ssh/authoriz
 
 You should be able to log in to the remote server without a password after this.
 
-Unfortunately it did not work with me and I was met with this:
-![failedLogin](<https://user-images.githubusercontent.com/114266346/193377476-eb1a9436-2a7b-401e-a6a1-3e1622901008.png>)
+![login](https://user-images.githubusercontent.com/114266346/195964123-dc974116-e4bb-40b0-877e-eae98ee6ef1e.png)
+As you can see, it logged me in without prompting me for a password.
 
-I'm not sure what exactly went wrong. I think it may have not copied correctly or I was typing in the wrong commands. 
-It just said the public key file wasn't found in the remote server.
 
 ## Optimizing Remote Running
 
