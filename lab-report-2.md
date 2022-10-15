@@ -142,42 +142,26 @@ It is assigning the last value to the first index of the array, yet does not ass
 The bug and symptom are related because the symptom shows how the last index of the array was not reassigned the first index's value, resulting in the element being 3 when it should have been 1.
 
 
-The method reversed() looks like this:
-```
-static int[] reversed(int[] arr) {
-    int[] newArray = new int[arr.length];
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
-    }
-    return arr;
-  }
-  ```
-  
-This method is trying to create a new array but adds the elements from the old array in reverse order.
-The failure inducing input/ test looked like this:
-
+In the ListExamples file this was the failure inducing input I used:
 ```
 @Test
-  public void testReversed() {
-    int[] input1 = {1, 2, 3};
-    assertArrayEquals(new int[]{3, 2, 1}, ArrayExamples.reversed(input1));
-  }
-```
+    public void filter2() {
+        List<String> input = new ArrayList<>();
+        List<String> expected = new ArrayList<>();
 
-This is what the test output looked like:
-![sc6](https://user-images.githubusercontent.com/114266346/195963018-7a6f127f-76d7-4353-b24b-d146c1cd3a56.png)
+        StringChecker sc = new checkString();
 
-The symptom was that it was not able to return anything since the bug was that the method was attempting to copy elements from the new array to the old array and returning the old array.
-This would not work since the new array is empty. That means the bug is trying to copy 0 to every index in the old array.
-
-The bug is in these lines:
-```
-arr[i] = newArray[arr.length - i - 1];
+        input.add("sandwich");
+        input.add("crab");
+        input.add("sand");
+        input.add("Towers");
+        expected.add("sandwich");
+        expected.add("Towers");
+        assertEquals(expected, ListExamples.filter(input, sc));
     }
-    return arr;
-  }
 ```
-Another bug is that the code is trying to return the old array when it should be return the new array with the reversed elements from the input array.
-So as a result, the symptom shows 0 when comparing the expected to the actual result for each element.
 
+This was the symptom I got:
+![sc6](https://user-images.githubusercontent.com/114266346/195963649-0385c7ee-c361-43e6-a5e7-628ebaa28ef4.png)
 
+It is giving an error because the bug is that there was never a StringChecker implementation. A new class would have to be created that implements StringChecker.
