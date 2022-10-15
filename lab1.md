@@ -32,7 +32,8 @@ Since I have a Mac, I followed [these](https://code.visualstudio.com/docs/remote
 
 The command to access and connect to a remote server will be `ssh` followed by the name of the server. In this case it would be the course specific account name you found earlier followed by "@ieng6.ucsd.edu".
 
-I, unfortunately, was not able to log in using the course specific account so I used my TritonLink login. 
+I, unfortunately, was not able to log in using the course specific
+acccount so I used my TritonLink login. 
 The command you typed into the terminal should look like this:
 
 `ssh cs15lfa22xx@ieng6.ucsd.edu`
@@ -52,7 +53,7 @@ I typed in yes and was then prompted to enter my password. This should be the pa
 The password you type won't appear in the terminal but once you've finished typing, press enter. You should be met with something that looks like this:
 
 
-![loggedIn](<https://user-images.githubusercontent.com/114266346/193379292-67b5c2e9-975b-4a7c-b6cc-097e2251ad89.png>)
+![loggedIn](<https://user-images.githubusercontent.com/114266346/195963849-3fb14e4f-7770-47bb-b17c-d3851994d482.png>)
 
 You should now be connected to the remote server!
 
